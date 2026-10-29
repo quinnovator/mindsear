@@ -1,0 +1,52 @@
+{
+  "name": "mindsear",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An adaptive tutor that turns any learning objective into a plan and teaches until the concepts stick.",
+  "license": "MIT",
+  "author": "Jack Quinn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinnovator/mindsear.git"
+  },
+  "homepage": "https://github.com/quinnovator/mindsear#readme",
+  "bugs": {
+    "url": "https://github.com/quinnovator/mindsear/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch server/index.ts",
+    "dev:web": "vite web",
+    "build": "vite build web",
+    "start": "node --env-file-if-exists=.env server/index.ts",
+    "test": "node --test 'test/**/*.test.ts'",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "pack:check": "node server/content/check.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run typecheck && npm test && npm run pack:check"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@hono/node-server": "^2.1.5",
+    "hono": "^4.13.14",
+    "mammoth": "^1.13.0",
+    "ts-fsrs": "^6.0.0",
+    "unpdf": "1.8.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "prettier": "3.9.10",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

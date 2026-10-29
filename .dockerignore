@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+web/dist
+data
+*.db
+.env
+.env.*
+deploy.local

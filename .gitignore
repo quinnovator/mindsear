@@ -1,0 +1,10 @@
+node_modules/
+web/dist/
+data/
+*.db
+*.db-*
+.env
+.env.*
+!.env.example
+# Private deployment specs for your own hosts
+deploy.local/
